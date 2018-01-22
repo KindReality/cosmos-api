@@ -55,10 +55,18 @@ namespace CosmosApi
                 c.SwaggerDoc("v1", new Info
                 {
                     Title = "Cosmos DB API",
-                    Version = "v1",
+                    Version = "v1.0.0",
                     Description = "Azure API App to connect to Cosmos DB",
                     License = new License { Name = "MIT", Url = "https://github.com/azure-labs/cosmos-api/blob/master/LICENSE" }
                 });                
+
+                c.SwaggerDoc("v2", new Info
+                {
+                    Title = "Cosmos DB & Azure Search API",
+                    Version = "v2.0.0",
+                    Description = "Azure API App to connect to Cosmos DB",
+                    License = new License { Name = "MIT", Url = "https://github.com/azure-labs/cosmos-api/blob/master/LICENSE" }
+                });  
 
                 var basePath = AppContext.BaseDirectory;
                 var xmlPath = Path.Combine(basePath, "CosmosApi.xml");
@@ -85,7 +93,12 @@ namespace CosmosApi
             indexSettings.JSConfig.SwaggerEndpoints.Add(new EndpointDescriptor()
             {
                 Url = "/v1/swagger.json",
-                Description = "Cosmos DB API V1"
+                Description = "Cosmos DB API v1.0.0"
+            });
+            indexSettings.JSConfig.SwaggerEndpoints.Add(new EndpointDescriptor()
+            {
+                Url = "/v2/swagger.json",
+                Description = "Cosmos DB API v2.0.0"
             });
 
             var fileServerOptions = new FileServerOptions()

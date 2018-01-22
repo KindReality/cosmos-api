@@ -81,6 +81,7 @@ namespace CosmosApi.Controllers
         [Route("[controller]/search")]
         [ProducesResponseType(typeof(IEnumerable<Person>), 200)]
         [ProducesResponseType(typeof(string), 400)]
+        [ApiExplorerSettings(GroupName = "v2")]
         public async Task<IActionResult> Search([FromServices]IDataRepository context, string query)
         {
             if (String.IsNullOrWhiteSpace(query))
