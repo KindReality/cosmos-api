@@ -1,4 +1,4 @@
-namespace CosmosApi.Models
+namespace Cosmos.API.Models
 {
     /// <summary>
     /// Database configuration settings

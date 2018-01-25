@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Threading.Tasks;
-using CosmosApi.Models;
-using CosmosApi.Services;
+using Cosmos.API.Models;
+using Cosmos.API.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Azure.Documents.Client;
 
-namespace CosmosApi.Controllers
+namespace Cosmos.API.Controllers
 {
     /// <summary>
     /// Controller used to manage documents in a Cosmos DB instance

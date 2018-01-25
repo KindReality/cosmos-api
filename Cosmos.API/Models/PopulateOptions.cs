@@ -1,7 +1,7 @@
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 
-namespace CosmosApi.Models
+namespace Cosmos.API.Models
 {
     /// <summary>
     /// Options for populating a database

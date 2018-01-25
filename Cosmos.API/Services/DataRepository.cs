@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
-using CosmosApi.Models;
+using Cosmos.API.Models;
 using Microsoft.Azure.Documents;
 using Microsoft.Azure.Documents.Client;
 using Microsoft.Azure.Search;
 using Microsoft.Azure.Search.Models;
 using Microsoft.Extensions.Options;
 
-namespace CosmosApi.Services
+namespace Cosmos.API.Services
 {
     /// <summary>
     /// Repository class for database access

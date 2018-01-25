@@ -1,8 +1,8 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using CosmosApi.Models;
+using Cosmos.API.Models;
 
-namespace CosmosApi.Services
+namespace Cosmos.API.Services
 {
     /// <summary>
     /// Repository interface for database access

@@ -4,15 +4,15 @@ using System.IO;
 using System.Linq;
 using System.Net;
 using System.Threading.Tasks;
-using CosmosApi.Models;
-using CosmosApi.Services;
+using Cosmos.API.Models;
+using Cosmos.API.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Azure.Documents;
 using Microsoft.Azure.Documents.Client;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Options;
 
-namespace CosmosApi.Controllers
+namespace Cosmos.API.Controllers
 {
     /// <summary>
     /// Controller used to populate Cosmos DB instance

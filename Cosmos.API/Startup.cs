@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
-using CosmosApi.Models;
-using CosmosApi.Services;
+using Cosmos.API.Models;
+using Cosmos.API.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.StaticFiles;
@@ -17,7 +17,7 @@ using Microsoft.Extensions.Options;
 using Swashbuckle.AspNetCore.Swagger;
 using Swashbuckle.AspNetCore.SwaggerUI;
 
-namespace CosmosApi
+namespace Cosmos.API
 {
     /// <summary>
     /// </summary>
@@ -42,9 +42,9 @@ namespace CosmosApi
             services.AddMvc();
 
             services.AddOptions();
-            
-            services.Configure<CosmosSettings>(Configuration.GetSection("CosmosDB"));  
-            services.Configure<SearchSettings>(Configuration.GetSection("Search"));   
+
+            services.Configure<CosmosSettings>(Configuration.GetSection("CosmosDB"));
+            services.Configure<SearchSettings>(Configuration.GetSection("Search"));
 
             services.AddSingleton<IConfiguration>(Configuration);
 
@@ -58,7 +58,7 @@ namespace CosmosApi
                     Version = "v1.0.0",
                     Description = "Azure API App to connect to Cosmos DB",
                     License = new License { Name = "MIT", Url = "https://github.com/azure-labs/cosmos-api/blob/master/LICENSE" }
-                });                
+                });
 
                 c.SwaggerDoc("v2", new Info
                 {
@@ -66,11 +66,7 @@ namespace CosmosApi
                     Version = "v2.0.0",
                     Description = "Azure API App to connect to Cosmos DB",
                     License = new License { Name = "MIT", Url = "https://github.com/azure-labs/cosmos-api/blob/master/LICENSE" }
-                });  
-
-                var basePath = AppContext.BaseDirectory;
-                var xmlPath = Path.Combine(basePath, "CosmosApi.xml");
-                c.IncludeXmlComments(xmlPath);
+                });
             });
         }
 
