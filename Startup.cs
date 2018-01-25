@@ -89,6 +89,8 @@ namespace CosmosApi
                 c.RouteTemplate = "{documentName}/swagger.json";
             });
 
+            app.UseDeveloperExceptionPage();
+
             var indexSettings = new IndexSettings();
             indexSettings.JSConfig.SwaggerEndpoints.Add(new EndpointDescriptor()
             {
