@@ -3,9 +3,16 @@
     <TargetFramework>netcoreapp2.0</TargetFramework>
   </PropertyGroup>
   <ItemGroup>
+    <None Remove="Scripts\genDocuments.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Scripts\genDocuments.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
     <Folder Include="Models\" />
     <Folder Include="Services\" />
-    <Folder Include="Scripts\" />
     <Folder Include="wwwroot\" />
   </ItemGroup>
   <ItemGroup>
