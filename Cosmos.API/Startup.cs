@@ -41,6 +41,8 @@ namespace Cosmos.API
         {
             services.AddMvc();
 
+            services.AddCors();
+            
             services.AddOptions();
 
             services.Configure<CosmosSettings>(Configuration.GetSection("CosmosDB"));
