@@ -21,16 +21,16 @@ function genDocuments(quantity) {
         };
         if (Math.random() >= 0.5) {
             var companies = ["Netility", "Biotica", "Amtas", "Cofine", "Avit"];
-            newDocument["company"] = companies[Math.floor(Math.random() * companies.length)]
+            newDocument["company"] = companies[Math.floor(Math.random() * companies.length)];
         }
         if (Math.random() >= 0.5) {
             newDocument["isVested"] = (Math.random() >= 0.5);
         }
         if (Math.random() >= 0.5) {
-            newDocument["age"] = (25 + (Math.random() * 40)).toPrecision(2);
+            newDocument["age"] = Math.trunc(25 + (Math.random() * 40));
         }
         if (Math.random() >= 0.5) {
-            newDocument["salary"] = (Math.round((50000 + (Math.random() * 100000)) / 1000) * 1000).toFixed(2);
+            newDocument["salary"] = Math.round((50000 + (Math.random() * 100000)) / 1000) * 1000;
         }
         return newDocument;
     }
